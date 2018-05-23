@@ -1393,8 +1393,12 @@ wish to left align your text}
 \ifgerman
 \usepackage[ngerman]{babel}
 \usepackage[babel,german=quotes]{csquotes}
+\renewcommand{\mkbegdispquote}[2]{\itshape}
 \MakeOuterQuote{"}
 \usepackage[ngerman]{cleveref}
 \usepackage[none]{hyphenat}
+\else
+\usepackage{csquotes}
+\renewcommand{\mkbegdispquote}[2]{\itshape}
 \fi
 
