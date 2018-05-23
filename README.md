@@ -17,10 +17,10 @@ A comprehensive documentation of the original template from Cambridge can be fou
 
 ### Relevant information for ITS students in order to use the template
 
-1. [Changes][Changes]
-2. [Features][Features]
-3. [Building your thesis][Building your thesis]
-4. [Usage details][Usage details]
+1. [Changes](#changes)
+2. [Features](#features)
+3. [Building your thesis](#building-your-thesis)
+4. [Usage details](#usage-details)
 
 ## Changes
 
