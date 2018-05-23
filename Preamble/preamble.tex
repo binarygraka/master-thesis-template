@@ -12,11 +12,19 @@
 
 % Define custom title spacing
 \ifsetCustomTitleSpacing
-\usepackage{titlesec}
 \titlespacing{\chapter}{0pt}{-2em}{6pt}	%\titlespacing*{{command}{left}{before title}{after title}}
 \titlespacing{\section}{0pt}{20pt}{6pt}
 \titlespacing{\subsection}{0pt}{20pt}{6pt}
 \titlespacing{\subsubsection}{0pt}{20pt}{6pt}
+\fi
+
+% Custom title style
+\ifsetCustomTitleStyle
+\setcounter{secnumdepth}{4}
+\titleformat{\chapter}{\normalfont\Large\bfseries}{\thechapter}{16pt}{\Large}
+\titleformat*{\section}{\fontsize{14}{16}\bfseries}
+\titleformat*{\subsection}{\fontsize{12}{14}\bfseries}
+\titleformat*{\subsubsection}{\fontsize{12}{14}\bfseries}
 \fi
 
 % Define more advanced styles for listings or overwrite default settings

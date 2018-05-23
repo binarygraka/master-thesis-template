@@ -159,6 +159,10 @@
 \newif\ifsetCustomTitleSpacing\setCustomTitleSpacingfalse % Set Custom TitleSpacing
 \DeclareOption{customtitlespacing}{\setCustomTitleSpacingtrue}
 
+% ************************** Custom Titlespacing  ******************************
+\newif\ifsetCustomTitleStyle\setCustomTitleStylefalse % Set Custom TitleSpacing
+\DeclareOption{customtitlestyle}{\setCustomTitleStyletrue}
+
 % **************************** Separate Abstract  ******************************
 \newif \ifdefineAbstract\defineAbstractfalse %To enable Separate abstract
 
@@ -258,6 +262,7 @@ supported!}
 % ******************************************************************************
 % ************************** Layout and Formatting *****************************
 
+\RequirePackage{titlesec} % Support Custom Title Layouts
 \RequirePackage{lscape}   % Supports Landscape Layout
 \RequirePackage{setspace} % Define line spacing in paragraph
 \RequirePackage{calc}     % calculate vertical spacing
