@@ -1090,10 +1090,10 @@ wish to left align your text}
 \cleardoublepage
 \setsinglecolumn
 \ifsmallspace
-\section*{\Large Acknowledgements}
+\section*{\Large Danksagung}
 \vspace{0.5cm}
 \else
-\chapter*{\Large Acknowledgements}
+\chapter*{\Large Danksagung}
 \fi
 \thispagestyle{empty}
 }
