@@ -1374,6 +1374,7 @@ wish to left align your text}
 \ifgerman
 \usepackage[ngerman]{babel}
 \usepackage[babel,german=quotes]{csquotes}
+\MakeOuterQuote{"}
 \usepackage[ngerman]{cleveref}
 \usepackage[none]{hyphenat}
 \fi
