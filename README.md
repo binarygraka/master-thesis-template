@@ -29,7 +29,8 @@ A comprehensive documentation of the original template from Cambridge can be fou
 *  Leave `german` as option of the documentclass in `thesis.tex` if you want German as language and remove it, if you want to use English.
 *  Make sure your installation supports `BibLatex` and you compile the template with `BibLatex`, otherwise the bibliography cannot be generated.
 *  Don't remove `custombib` from the options of the documentclass in `thesis.tex`.
-*  If you remove `customtitlespacing` from the options of the documentlcass in `thesis.tex`, the titlespacings are not as defined in the guidelines anymore. However, the difference is very small. I like it better without this option.
+*  If you remove `customtitlespacing` from the options of the documentclass in `thesis.tex`, the title spacings will not match the guidelines anymore. The difference, however, is very small. I like it better without this option.
+*  If you remove `customtitlestyle` from the options of the documentclass in `thesis.tex`, the title styles will not match the guidelines anymore. 
 
 :warning: If you switch between English and German, it can happen that some errors appear on the first compilation of PDFLateX. Just compile it again and it works.
 
@@ -38,9 +39,10 @@ A comprehensive documentation of the original template from Cambridge can be fou
 *  The bibliography option `custombib` has been set as default and configured to use the modern BibLatex environment with the Biber backend. This option does not need to be modified. If you change the bibliography option, you also have to change the according sections in `thesis.tex` and `preamble.tex`
 * Due to the transition to BibLatex, the document has to be compiled using Biber instead of BibTex. More details can be found below.
 * German has been added as an option. When this option is set, full support of the german language is given. Headings and the bibliography are automatically changed to German. If the option is not given, English is used as default language.
-* Custom title spacing has been added.
-* Titlepage has been added according to the ITS guidelines. 
+* Custom title spacing and custom title styles have been added.
+* An additional titlepage has been added according to the ITS guidelines. 
 * Package `acronym` has been added to manage abbreviations.
+* Package `listings` has been added for source code listings.
 
 --------------------------------------------------------------------------------
 ## Features 
@@ -212,10 +214,6 @@ It supports the following custom options in the documentclass in thesis.tex:
     Use `print` in the options to activate Print Version with appropriate margins and page layout and view styles.
     Leaving the options field blank will activate Online version.
 
-*  `smallspace`: Use `smallspace` in options, to decrease the space on top of the chapter title in "Eidesstaatliche Erklärung", "Danksagung" und "Kurzinformation/Abstract". Default is false.
-
-* `customtitlespacing`: Use `customtitlespacing` in options to activate custom titel spaces, which can be defined in the `preamble.tex`. Custom title spaces will override print/online title space setup.
-
 *   `custommargin`: You can alter the margin dimension for both print and online version by using the keyword `custommargin` in the options. Then you can define the dimensions of the margin in the `preamble.tex` file:
 
         \ifsetCustomMargin
@@ -225,6 +223,12 @@ It supports the following custom options in the documentclass in thesis.tex:
     `\setFancyHdr` should be called when using custom margins for proper header/footer dimensions
 
     `\ifsetMargin` is deprecated, please use `\ifsetCustomMargin` instead.
+    
+*  `smallspace`: Use `smallspace` in options, to decrease the space on top of the chapter title in "Eidesstaatliche Erklärung", "Danksagung" und "Kurzinformation/Abstract". Default is false.
+
+* `customtitlespacing`: Use `customtitlespacing` in options to activate custom titel spaces, which can be defined in the `preamble.tex`. Custom title spaces will override print/online title space setup.
+
+* `customtitlestyle`: Use `customtitlestyle` in options to activate custom title styles, which can be defined in the preamble.tex. Custom title styles will override print/online title style setup.
 
 *   `index`: Including this option builds the index, which is placed at the end of the thesis.
 
