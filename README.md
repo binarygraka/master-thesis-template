@@ -22,6 +22,13 @@ A comprehensive documentation of the original template from Cambridge can be fou
 3. [Building your thesis](#building-your-thesis)
 4. [Usage details](#usage-details)
 
+### Quick info
+
+*  `thesis.tex` is the main tex file.
+*  Fill in your information in `thesis-info.tex`. This is the only place where you need to put your information.
+*  Leave `german` as option for the documentclass in `thesis.tex` if you want German as language and remove it, if you want to use English.
+*  Make sure your installation supports `BibLatex` and you compile the template with `BibLatex`, otherwise the bibliography cannot be generated.
+
 ## Changes
 
 *  The bibliography option `custombib` has been set as default and configured to use the modern BibLatex environment with the Biber backend. This option does not need to be modified. If you change the bibliography option, you also have to change the according sections in `thesis.tex` and `preamble.tex`
