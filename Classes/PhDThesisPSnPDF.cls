@@ -62,6 +62,10 @@
   \fi
 }
 
+% **************************** Set language to German **************************
+\newif\ifgerman\germanfalse
+\DeclareOption{german}{\germantrue}
+
 \newif\ifsetCustomFont\setCustomFontfalse     % Custom Font with Math Support
 \DeclareOption{customfont}{
   \ifsetFont
@@ -1105,7 +1109,6 @@ wish to left align your text}
 %\addcontentsline{toc}{chapter}{\nomname}
 }
 
-
 % ***************************** Create the index *******************************
 \ifPHD@index
     \RequirePackage{makeidx}
@@ -1342,4 +1345,12 @@ wish to left align your text}
 			- \totalheightof{\usebox{\PHD@collegedate}}
 }
 }
+
+% Set language to german, if the option is specified
+\ifgerman
+\usepackage[ngerman]{babel}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage[ngerman]{cleveref}
+\usepackage[none]{hyphenat}
+\fi
 

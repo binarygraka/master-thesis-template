@@ -1,7 +1,7 @@
 % ******************************* PhD Thesis Template **************************
 % Please have a look at the README.md file for info on how to use the template
 
-\documentclass[a4paper,12pt,numbered,index,oneside,smallspace]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,index,oneside,smallspace,custombib,german]{Classes/PhDThesisPSnPDF}
 
 % ******************************************************************************
 % ******************************* Class Options ********************************
@@ -11,6 +11,10 @@
 % `a4paper'(The University of Cambridge PhD thesis guidelines recommends a page
 % size a4 - default option) or `a5paper': A5 Paper size is also allowed as per
 % the Cambridge University Engineering Deparment guidelines for PhD thesis
+%
+% `german` Use `german` to set chapters, sections and the bibliography to German. 
+% Only works with the `custombib` command, defaulting to BibLatex now! For 
+% compiling the bibliography, use biber.
 %
 % `11pt' or `12pt'(default): Font Size 10pt is NOT recommended by the University
 % guidelines
@@ -168,22 +172,22 @@
 % Bibliography style previews: http://nodonn.tipido.net/bibstyle.php
 % Reference styles: http://sites.stat.psu.edu/~surajit/present/bib.htm
 
-\bibliographystyle{IEEEtran}
-\interlinepenalty=10000
-\singlespace
+%\bibliographystyle{IEEEtran}
 %\bibliographystyle{unsrt} % Use for unsorted references  
 %\bibliographystyle{plainnat} % use this to have URLs listed in References
-\cleardoublepage
-\bibliography{References/references} % Path to your References.bib file
-
+%\bibliography{References/references} % Path to your References.bib file
 
 % If you would like to use BibLaTeX for your references, pass `custombib' as
 % an option in the document class. The location of 'reference.bib' should be
 % specified in the preamble.tex file in the custombib section.
 % Comment out the lines related to natbib above and uncomment the following line.
 
-%\printbibliography[heading=bibintoc, title={References}]
+\cleardoublepage
+\interlinepenalty=10000
+\renewcommand\baselinestretch{1.2}
 
+% Add the option title={new_title} if you want to rename the title of the bibliography
+\printbibliography[heading=bibintoc]
 
 \end{spacing}
 
