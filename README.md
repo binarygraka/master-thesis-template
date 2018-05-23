@@ -28,6 +28,7 @@ A comprehensive documentation of the original template from Cambridge can be fou
 *  Fill in your information in `thesis-info.tex`. This is the only place where you need to put your information.
 *  Leave `german` as option for the documentclass in `thesis.tex` if you want German as language and remove it, if you want to use English.
 *  Make sure your installation supports `BibLatex` and you compile the template with `BibLatex`, otherwise the bibliography cannot be generated.
+*  Don't remove `custombib` from the options for the documentclass in `thesis.tex`.
 
 ## Changes
 
