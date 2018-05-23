@@ -267,6 +267,18 @@ supported!}
 \RequirePackage{ifpdf}    % Check for pdfLaTeX
 \RequirePackage{ifxetex}  % XeLaTeX
 
+% ********************************** Listings **********************************
+\RequirePackage{listings}
+\lstset{
+  numbers=left,
+  stepnumber=1,
+  numbersep=10pt,
+  basicstyle=\footnotesize,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false
+}
+
 % *********************** Table of Contents & Appendices ***********************
 % add Bibliography, List of figures and tables to contents
 \RequirePackage[nottoc]{tocbibind}
@@ -821,7 +833,6 @@ wish to left align your text}
 	\thispagestyle{empty}  % Empty header styles
 	\newpage%
 	\if@twocolumn\hbox{}\newpage\fi\fi\fi}
-
 
 % ******************************************************************************
 % **************************** Macro Definitions *******************************

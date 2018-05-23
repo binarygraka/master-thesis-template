@@ -25,6 +25,30 @@ Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
 publishing software like Aldus PageMaker including versions of Lorem 
 Ipsum~\citep{AAB95,Con90,LM65}.
 
+Short code example to demonstrate lstlisting:
+
+\begin{lstlisting}
+#include <stdio.h>
+#define N 10
+/* Block
+ * comment */
+
+int main()
+{
+    int i;
+
+    // Line comment.
+    puts("Hello world!");
+    
+    for (i = 0; i < N; i++)
+    {
+        puts("LaTeX is also great for programmers!");
+    }
+
+    return 0;
+}
+\end{lstlisting}
+
 The most famous equation in the world: $E^2 = (m_0c^2)^2 + (pc)^2$, which is 
 known as the \textbf{energy-mass-momentum} relation as an in-line equation.
 
