@@ -1,7 +1,7 @@
 % ******************************* PhD Thesis Template **************************
 % Please have a look at the README.md file for info on how to use the template
 
-\documentclass[a4paper,12pt,times,numbered,print,index]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,numbered,index,oneside,smallspace]{Classes/PhDThesisPSnPDF}
 
 % ******************************************************************************
 % ******************************* Class Options ********************************
@@ -39,6 +39,14 @@
 % `custommargin`: Use `custommargin' in options to activate custom page margins,
 % which can be defined in the preamble.tex. Custom margin will override
 % print/online margin setup.
+%
+% `smallspace`: Use `smallspace` in options, to decrease the space on top of the 
+%  chapter title in eidesstaatliche-erklaerung, acknowledgements-suas and 
+%  abstract-suas. Default is false.
+%
+% `customtitlespacing`: Use `customtitlespacing` in options to active custom title
+% spaces, which can be defined in the preamble.tex. Custom title spaces will 
+% override print/online title space setup.
 %
 % *********************** Choosing the Fonts in Class Options ******************
 %
@@ -111,12 +119,16 @@
 
 \frontmatter
 
-\maketitle
+%\maketitle	% Use this option to activate the original title page from Cambridge
+\include{thesis-titelpage}
 
-\include{Dedication/dedication}
-\include{Declaration/declaration}
-\include{Acknowledgement/acknowledgement}
-\include{Abstract/abstract}
+%\include{Dedication/dedication}
+%\include{Declaration/declaration}
+\include{Eidesstaatliche-Erklaerung/eidesstaatliche-erklaerung}
+%\include{Acknowledgement/acknowledgement}
+\include{Acknowledgement-suas/acknowledgement-suas}
+%\include{Abstract/abstract}
+\include{Abstract-suas/abstract-suas}
 
 % *********************** Adding TOC and List of Figures ***********************
 
@@ -149,13 +161,16 @@
 %\backmatter
 
 % ********************************** Bibliography ******************************
-\begin{spacing}{0.9}
+%\begin{spacing}{0.9}
+\begin{spacing}{1}
 
 % To use the conventional natbib style referencing
 % Bibliography style previews: http://nodonn.tipido.net/bibstyle.php
 % Reference styles: http://sites.stat.psu.edu/~surajit/present/bib.htm
 
-\bibliographystyle{apalike}
+\bibliographystyle{IEEEtran}
+\interlinepenalty=10000
+\singlespace
 %\bibliographystyle{unsrt} % Use for unsorted references  
 %\bibliographystyle{plainnat} % use this to have URLs listed in References
 \cleardoublepage

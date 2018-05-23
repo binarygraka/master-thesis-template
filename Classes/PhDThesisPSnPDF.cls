@@ -15,7 +15,7 @@
 \newcommand\filedate{2016/04/23}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{PhDThesisPSnPDF}[\filedate\space A PhD thesis class file
- by Krishna Kumar (v\fileversion)]
+ by Krishna Kumar (v\fileversion), adapted to Salzburg University of Applied Sciences regulatories by Stefan Binna]
 \typeout{https://github.com/kks32/phd-thesis-template/}
 
 
@@ -31,6 +31,10 @@
 \newif\ifPHD@index\PHD@indexfalse
 \DeclareOption{index}{\PHD@indextrue}
 
+% ****************************** Define smallspace *****************************
+\newif\ifsmallspace\smallspacefalse
+\DeclareOption{smallspace}{\smallspacetrue}
+
 % ******************************* Font Option **********************************
 \newif\ifsetFont\setFontfalse                 % Font is not set
 
@@ -38,7 +42,7 @@
 \DeclareOption{times}{
   \ifsetFont
     \ClassWarning{PhDThesisPSnPDF}{Font selection conflict: A font package was
-      already specified. Please check the document class options in case you 
+      aleady specified. Please check the document class options in case you 
       have defined two fonts.}
   \else
     \PHD@timestrue
@@ -143,6 +147,10 @@
 \newif\ifsetCustomMargin\setCustomMarginfalse % Set Custom Margin
 \newif\ifsetMargin\setMarginfalse % Set Custom Margin
 \DeclareOption{custommargin}{\setCustomMargintrue}
+
+% ************************** Custom Titlespacing  ******************************
+\newif\ifsetCustomTitleSpacing\setCustomTitleSpacingfalse % Set Custom TitleSpacing
+\DeclareOption{customtitlespacing}{\setCustomTitleSpacingtrue}
 
 % **************************** Separate Abstract  ******************************
 \newif \ifdefineAbstract\defineAbstractfalse %To enable Separate abstract
@@ -674,10 +682,7 @@ supported!}
   % PDFLaTeX does it automatically.
 \else
   % dvips
-  \ifxetex
-  \else % If not XeLaTeX
-    \RequirePackage{breakurl} % to split the url over multiple lines
-  \fi
+  \RequirePackage{breakurl} % to split the url over multiple lines
 \fi
   
 % ******************************************************************************
@@ -782,7 +787,10 @@ wish to left align your text}
 \fi
 }
 
+\ifsetCustomMargin
+\else
 \setlength{\headheight}{14.5pt}
+\fi
 %\renewcommand{\headrulewidth}{0.5pt}
 %\renewcommand{\footrulewidth}{0pt}
 \fancypagestyle{plain}{
@@ -1007,6 +1015,36 @@ wish to left align your text}
 
 
 
+% ************************** Eidesstaatliche Erklärung *****************************
+% The declaration environment puts a large, bold, centered
+% "Declaration" label at the top of the page.
+
+\newcommand*{\SignatureAndEnrolNum}[1]{%
+	\par\noindent\makebox[2.5in][l]{}        \hfill\makebox[2.0in][c]{\EnrolNum}%
+    \par\noindent\makebox[2.5in]{\hrulefill} \hfill\makebox[2.0in]{\hrulefill}%
+    \par\noindent\makebox[2.5in][l]{#1}      \hfill\makebox[2.0in][r]{Matrikelnummer}%
+}%
+
+\newenvironment{eidesstaatliche-erklaerung}{
+\cleardoublepage
+\setsinglecolumn
+\ifsmallspace
+\section*{\Large Eidesstaatliche Erkl\"arung}
+\vspace{1cm}
+\else
+\chapter*{\Large Eidesstaatliche Erkl\"arung}
+\fi
+\thispagestyle{empty}
+}{
+\flushleft
+\vspace{3cm}
+\VenueDate
+\vspace{1.5cm}
+\SignatureAndEnrolNum{\Author}
+}
+
+
+
 % ****************************** Acknowledgements ********************************
 % The acknowledgements environment puts a large, bold, centered
 % "Acknowledgements" label at the top of the page.
@@ -1015,6 +1053,24 @@ wish to left align your text}
 \cleardoublepage
 \setsinglecolumn
 \chapter*{\centering \Large Acknowledgements}
+\thispagestyle{empty}
+}
+
+
+
+% **************************** Acknowledgement SUAS ******************************
+% The acknowledgements environment puts a large, bold, centered
+% "Acknowledgements" label at the top of the page.
+
+\newenvironment{acknowledgements-suas}{
+\cleardoublepage
+\setsinglecolumn
+\ifsmallspace
+\section*{\Large Acknowledgements}
+\vspace{0.5cm}
+\else
+\chapter*{\Large Acknowledgements}
+\fi
 \thispagestyle{empty}
 }
 
@@ -1120,6 +1176,34 @@ wish to left align your text}
 \fi
 }
 
+% Used for the table in abstract-suas
+\usepackage{array}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\newenvironment{abstract-suas} {
+\ifPHD@abstract
+% Separate abstract as per Student Registry guidelines
+  \thispagestyle{empty}
+  \setsinglecolumn
+  \begin{center}
+    { \Large {\bfseries {\@title}} \par}
+    {{\large \vspace*{1em} \@author} \par}
+  \end{center}
+\else
+% Normal abstract in the thesis
+  \cleardoublepage
+  \setsinglecolumn
+  \ifsmallspace
+  \section*{\Large Allgemeine Informationen}
+  \vspace{0.5cm}
+  \else
+  \chapter*{\Large Allgemeine Informationen}
+  \fi
+  \flushleft
+  \thispagestyle{empty}
+\fi
+}
+
 
 % ******************** To compute empty space in title page *******************
 % Boxes below are used to space different contents on the title page
@@ -1202,15 +1286,6 @@ wish to left align your text}
   \end{minipage}
 \end{lrbox}
 
-% Department Box
-\newsavebox{\PHD@dept}
-\begin{lrbox}{\PHD@dept}
-  \begin{minipage}[c]{\textwidth}
-    \centering {\large \@dept \par}
-	       {\large \@university \par}
-  \end{minipage}
-\end{lrbox}
-
 % Submission Box
 \newsavebox{\PHD@submission}
 \begin{lrbox}{\PHD@submission}
@@ -1219,6 +1294,15 @@ wish to left align your text}
       \large \submissiontext \par
       \large \textit {\@degreetitle} \par
     \end{center}
+  \end{minipage}
+\end{lrbox}
+
+% Department Box
+\newsavebox{\PHD@dept}
+\begin{lrbox}{\PHD@dept}
+  \begin{minipage}[c]{\textwidth}
+    \centering {\large \@dept \par}
+	       {\large \@university \par}
   \end{minipage}
 \end{lrbox}
 
