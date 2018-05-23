@@ -30,6 +30,8 @@ A comprehensive documentation of the original template from Cambridge can be fou
 *  Make sure your installation supports `BibLatex` and you compile the template with `BibLatex`, otherwise the bibliography cannot be generated.
 *  Don't remove `custombib` from the options for the documentclass in `thesis.tex`.
 
+:warning: If you switch between English and German, it can happen that some errors appear on the first compilation of PDFLateX. Just compile it again and it works.
+
 ## Changes
 
 *  The bibliography option `custombib` has been set as default and configured to use the modern BibLatex environment with the Biber backend. This option does not need to be modified. If you change the bibliography option, you also have to change the according sections in `thesis.tex` and `preamble.tex`
