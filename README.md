@@ -32,7 +32,7 @@ A comprehensive documentation of the original template from Cambridge can be fou
 *  If you remove `customtitlespacing` from the options of the documentclass in `thesis.tex`, the title spacings will not match the guidelines anymore. The difference, however, is very small. I like it better without this option.
 *  If you remove `customtitlestyle` from the options of the documentclass in `thesis.tex`, the title styles will not match the guidelines anymore. 
 
-:warning: If you switch between English and German, it can happen that some errors appear on the first compilation of PDFLateX. Just compile it again and it works.
+:warning: If you switch between English and German, it can happen that some errors appear on the first compilation with PDFLateX. Just compile it again and it works.
 
 ## Changes
 
@@ -79,11 +79,11 @@ A comprehensive documentation of the original template from Cambridge can be fou
 
 # Building your thesis
 
-## Using Texmaker on Windows
+## Using MiKTeX and Texmaker on Windows
 
 Install `MiKTeX` as usual. The recommended editor is `Texmaker`. 
 
-If the `MiKTeX >= 2.9` is installed, Biber is automatically included. To use Biber instead of BibTex with Texmaker, go to "Optionen" --> "Texmaker konfigurieren" and replace the content at the line "Bib(la)tex" with the following:
+If `MiKTeX >= 2.9` is installed, Biber is automatically included. To use Biber instead of BibTex with Texmaker, go to "Optionen" --> "Texmaker konfigurieren" and replace the content at the line "Bib(la)tex" with the following:
 
 ```
 biber %
