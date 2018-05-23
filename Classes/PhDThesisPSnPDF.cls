@@ -1019,6 +1019,26 @@ wish to left align your text}
 
 
 
+% *************************** List of Abbreviations ******************************
+% The declaration environment puts a large, bold, centered
+% "Declaration" label at the top of the page.
+
+\newenvironment{list-of-abbreviations}{
+\cleardoublepage
+\setsinglecolumn
+\thispagestyle{empty}
+
+\ifgerman
+\chapter*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\else
+\chapter*{List of Abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\fi
+}
+
+
+
 % ************************** Eidesstaatliche Erklärung *****************************
 % The declaration environment puts a large, bold, centered
 % "Declaration" label at the top of the page.
@@ -1077,6 +1097,10 @@ wish to left align your text}
 \fi
 \thispagestyle{empty}
 }
+
+
+% ********************************** Acronym ***********************************
+\RequirePackage[printonlyused]{acronym}
 
 
 
