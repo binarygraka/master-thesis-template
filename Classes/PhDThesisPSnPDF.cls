@@ -1,14 +1,16 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                                                            %%
-%% Class ``PhD Thesis PSnPDF''                                                %%
-%%                                                                            %%
-%% A PhD thesis LaTeX template for Cambridge University Engineering Department%%
-%%                                                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                             %%
+%% Class ``PhD Thesis PSnPDF''                                                 %%
+%%                                                                             %%
+%% A PhD thesis LaTeX template for Cambridge University Engineering Department %%
+%%                                                                             %%
 %% Version: v2.3.1                                                             %%
-%% Authors: Krishna Kumar                                                     %%
-%% License: MIT License (c) 2016 Krishna Kumar                                %%
-%% GitHub Repo: https://github.com/kks32/phd-thesis-template/                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Authors: Krishna Kumar                                                      %%
+%% Enhanced by: Stefan Binna												   %%
+%% License: MIT License (c) 2016 Krishna Kumar                                 %%
+%% GitHub Repo Original: https://github.com/kks32/phd-thesis-template/         %%
+%% GitHub Repo Enhanced: https://github.com/binarygraka/master-thesis-template %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % ************************** Class Identification ******************************
 \newcommand\fileversion{2.3.1}
@@ -16,7 +18,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{PhDThesisPSnPDF}[\filedate\space A PhD thesis class file
  by Krishna Kumar (v\fileversion), adapted to Salzburg University of Applied Sciences regulatories by Stefan Binna]
-\typeout{https://github.com/kks32/phd-thesis-template/}
+\typeout{https://github.com/kks32/phd-thesis-template}
+\typeout{https://github.com/binarygraka/master-thesis-template}
 
 
 % ******************************************************************************
