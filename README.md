@@ -26,9 +26,10 @@ A comprehensive documentation of the original template from Cambridge can be fou
 
 *  `thesis.tex` is the main tex file.
 *  Fill in your information in `thesis-info.tex`. This is the only place where you need to put your information.
-*  Leave `german` as option for the documentclass in `thesis.tex` if you want German as language and remove it, if you want to use English.
+*  Leave `german` as option of the documentclass in `thesis.tex` if you want German as language and remove it, if you want to use English.
 *  Make sure your installation supports `BibLatex` and you compile the template with `BibLatex`, otherwise the bibliography cannot be generated.
-*  Don't remove `custombib` from the options for the documentclass in `thesis.tex`.
+*  Don't remove `custombib` from the options of the documentclass in `thesis.tex`.
+*  If you remove `customtitlespacing` from the options of the documentlcass in `thesis.tex`, the titlespacings are not as defined in the guidelines anymore. However, the difference is very small. I like it better without this option.
 
 :warning: If you switch between English and German, it can happen that some errors appear on the first compilation of PDFLateX. Just compile it again and it works.
 
