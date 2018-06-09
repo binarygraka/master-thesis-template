@@ -1,7 +1,7 @@
-ITS Master Thesis Template
+Unofficial ITS Master Thesis Template
 ========================
 
-> A LaTeX / XeLaTeX / LuaLaTeX Master thesis template for Salzburg University of Applied Sciences (Information Technology & Systems-Management) [https://www.fh-salzburg.ac.at](https://www.fh-salzburg.ac.at/)
+> Unofficial LaTeX / XeLaTeX / LuaLaTeX Master thesis template for Salzburg University of Applied Sciences (Information Technology & Systems-Management) [https://www.fh-salzburg.ac.at](https://www.fh-salzburg.ac.at/)
 
 [![License MIT](http://img.shields.io/badge/license-MIT-brightgreen.svg)](license.md)
 
@@ -11,7 +11,7 @@ ITS Master Thesis Template
 
 ## General Information
 
-The original template provided by Krishna Kumar has been modified according to the Master guidelines of Informationtechnology & System-Management at Salzburg University of Applied Sciences (MA-Leitfaden_ITS_v4.4.pdf).
+The original template provided by Krishna Kumar has been modified according to the Master guidelines of Informationtechnology & Systems-Management at Salzburg University of Applied Sciences (MA-Leitfaden_ITS_v4.4.pdf).
 
 A comprehensive documentation of the original template from Cambridge can be found here: https://github.com/kks32/phd-thesis-template
 
