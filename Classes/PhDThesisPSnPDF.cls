@@ -1396,7 +1396,7 @@ wish to left align your text}
 \renewcommand{\mkbegdispquote}[2]{\itshape}
 \MakeOuterQuote{"}
 \usepackage[ngerman]{cleveref}
-\usepackage[none]{hyphenat}
+\usepackage{hyphenat}
 \else
 \usepackage{csquotes}
 \renewcommand{\mkbegdispquote}[2]{\itshape}
