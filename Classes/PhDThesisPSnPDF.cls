@@ -1245,7 +1245,6 @@ wish to left align your text}
   \else
   \chapter*{\Large Allgemeine Informationen}
   \fi
-  \flushleft
   \thispagestyle{empty}
 \fi
 }
